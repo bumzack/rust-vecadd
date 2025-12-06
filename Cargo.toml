@@ -11,4 +11,7 @@ cuda_builder = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main",
 
 
 [build-dependencies]
-cuda_builder = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", optional = true }
+cuda_builder = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", optional = false, feature =  ["rustc_codegen_nvvm"] }
+
+[features]
+cuda_builder = ["dep:cuda_builder"]
