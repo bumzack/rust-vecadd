@@ -5,7 +5,10 @@ edition = "2024"
 
 [dependencies]
 # cuda_std = { path = "../../../crates/cuda_std" }
-cuda_std = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", default-features = false }
+# cuda_std = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", default-features = false }
+
+cuda_std = { git = "https://github.com/Rust-GPU/Rust-CUDA.git", branch = "main", package = "cuda_std" }
+
 
 [lib]
 crate-type = ["cdylib", "rlib"]

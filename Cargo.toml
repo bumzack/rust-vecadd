@@ -5,13 +5,8 @@ edition = "2024"
 
 [dependencies]
 nanorand = "0.8.0"
-cuda_std = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", default-features = false, optional = true }
-cust = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", default-features = false, features = ["glam"], optional = true }
-cuda_builder = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", optional = true }
-
+cust = { git = "https://github.com/Rust-GPU/Rust-CUDA.git", branch = "main", package = "cust" }
 
 [build-dependencies]
-cuda_builder = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", optional = false, feature =  ["rustc_codegen_nvvm"] }
+cuda_builder = { git = "https://github.com/Rust-GPU/Rust-CUDA.git", branch = "main", package = "cuda_builder" }
 
-[features]
-cuda_builder = ["dep:cuda_builder"]
