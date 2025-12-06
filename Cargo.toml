@@ -4,12 +4,11 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-nanorand = "0.7"
-
-
+nanorand = "0.8.0"
 cuda_std = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", default-features = false, optional = true }
 cust = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", default-features = false, features = ["glam"], optional = true }
-
-
 cuda_builder = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", optional = true }
 
+
+[build-dependencies]
+cuda_builder = { git = "https://github.com/Rust-GPU/Rust-CUDA", branch = "main", optional = true }
